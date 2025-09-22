@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ParallaxSection from "@/components/ParallaxSection";
-import LazyImage from "@/components/LazyImage";
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -194,7 +193,7 @@ export default function GalleryPage() {
                 onClick={() => openLightbox(image.src)}
               >
                 <div className="relative overflow-hidden rounded-lg">
-                  <LazyImage
+                  <Image
                     src={image.src}
                     alt={image.title}
                     width={400}
@@ -229,7 +228,7 @@ export default function GalleryPage() {
             className="relative max-w-4xl max-h-full"
             onClick={(e) => e.stopPropagation()}
           >
-            <LazyImage
+            <Image
               src={selectedImage}
               alt="Gallery Image"
               width={1200}

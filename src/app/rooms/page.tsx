@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ParallaxSection from "@/components/ParallaxSection";
-import LazyImage from "@/components/LazyImage";
-import LazySection from "@/components/LazySection";
 
 export default function RoomsPage() {
   const rooms = [
@@ -68,7 +66,7 @@ export default function RoomsPage() {
       {/* Page Header */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <ParallaxSection speed={0.4} className="absolute inset-0">
-          <LazyImage
+          <Image
             src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
             alt="Luxury Hotel Rooms"
             fill
@@ -104,7 +102,7 @@ export default function RoomsPage() {
                 className="card group cursor-pointer"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <LazyImage
+                  <Image
                     src={room.image}
                     alt={room.name}
                     fill
@@ -148,7 +146,7 @@ export default function RoomsPage() {
       </section>
 
       {/* CTA Section */}
-      <LazySection threshold={0.2} className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -165,7 +163,7 @@ export default function RoomsPage() {
             </Link>
           </motion.div>
         </div>
-      </LazySection>
+      </section>
 
       <Footer />
     </div>

@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ParallaxSection from "@/components/ParallaxSection";
-import LazyImage from "@/components/LazyImage";
-import LazySection from "@/components/LazySection";
 
 export default function FacilitiesPage() {
   const facilities = [
@@ -73,7 +71,7 @@ export default function FacilitiesPage() {
       {/* Page Header */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <ParallaxSection speed={0.5} className="absolute inset-0">
-          <LazyImage
+          <Image
             src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
             alt="Hotel Facilities"
             fill
@@ -122,7 +120,7 @@ export default function FacilitiesPage() {
                 className="card group overflow-hidden"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <LazyImage
+                  <Image
                     src={facility.image}
                     alt={facility.name}
                     fill
@@ -173,7 +171,7 @@ export default function FacilitiesPage() {
                 className="card overflow-hidden"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <LazyImage
+                  <Image
                     src={experience.image}
                     alt={experience.name}
                     fill

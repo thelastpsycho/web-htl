@@ -6,8 +6,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ParallaxSection from "@/components/ParallaxSection";
-import LazyImage from "@/components/LazyImage";
-import LazySection from "@/components/LazySection";
 
 export default function Home() {
   const introItems = [
@@ -29,7 +27,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <ParallaxSection speed={0.3} className="absolute inset-0">
-          <LazyImage
+          <Image
             src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
             alt="Luxury Hotel Room"
             fill
@@ -112,9 +110,9 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <LazySection threshold={0.1} className="section-padding bg-gray-50 relative overflow-hidden">
+      <section className="section-padding bg-gray-50 relative overflow-hidden">
         <ParallaxSection speed={0.2} className="absolute inset-0 opacity-5">
-          <LazyImage
+          <Image
             src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
             alt="Background"
             fill
@@ -157,7 +155,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </LazySection>
+      </section>
 
       <Footer />
     </div>

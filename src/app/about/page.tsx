@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ParallaxSection from "@/components/ParallaxSection";
-import LazyImage from "@/components/LazyImage";
-import LazySection from "@/components/LazySection";
 
 export default function AboutPage() {
   const timeline = [
@@ -74,7 +72,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <ParallaxSection speed={0.3} className="absolute inset-0">
-          <LazyImage
+          <Image
             src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
             alt="Luxury Hotel"
             fill
@@ -144,7 +142,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative h-96 rounded-lg overflow-hidden"
             >
-              <LazyImage
+              <Image
                 src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
                 alt="Hotel Lobby"
                 fill

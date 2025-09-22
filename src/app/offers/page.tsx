@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ParallaxSection from "@/components/ParallaxSection";
-import LazyImage from "@/components/LazyImage";
 
 export default function OffersPage() {
   const offers = [
@@ -171,7 +170,7 @@ export default function OffersPage() {
                 className="card group overflow-hidden"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <LazyImage
+                  <Image
                     src={offer.image}
                     alt={offer.title}
                     fill
